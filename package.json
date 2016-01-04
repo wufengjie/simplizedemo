@@ -1,0 +1,29 @@
+{
+  "name": "SimplizeDemo",
+  "description": "SimplizeDemo project",
+  "version": "0.0.1",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "timestamp": 1451665438202,
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "build": "nap server build",
+    "dev": "nap server dev -i 0.0.0.0"
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "napDependencies": {
+    "simplize": "^0.0.5"
+  }
+}

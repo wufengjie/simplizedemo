@@ -1,0 +1,15 @@
+<template name="template">
+    <div class="channel-content">
+        <div class="quote">We use global template element to render the whole app.</div>
+        <h3>What is the principle?</h3>
+        <p>我们的原理是通过程序的机制自动将模板组装成整个app。通过指定和渲染的方式来根据不同页面显示不同的模板内容。所以你只需要无序的编写你的模板，指定模板的名称。而在js端，你只需要绑定哪个模板属于哪个浏览器对象即可。</p>
+        <p>不过，你的模板代码，必须编写一个空的div标签，或者能使用选择器取到节点的标签即可，因为这个是整个app的容器，不能省略。比如说，我在body下面写入这样的代码：</p>
+        <pre>&lt;div id="webapp"&gt;&lt;/div&gt;</pre>
+        <p>这个 #webapp 即是你的app的容器。</p>
+        <p>然而，你需要写模板，那么你只需要使用template标签将模板包涵写入页面即可。</p>
+        <pre>&lt;template name="welcome"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;Hello world!<br />&lt;/template&gt;</pre>
+        <h3>Notice:</h3>
+        <p>在simplize自动创建的项目中，你还可以将模板写在其他文件中，然后使用以下代码加载即可：</p>
+        <pre>&lt;% dir/your_template.html %&gt;</pre>
+    </div>
+</template>

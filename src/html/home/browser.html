@@ -1,0 +1,32 @@
+<template name="browser">
+    <div class="channel-content">
+        <h3>browser.$data</h3>
+        <p>浏览器对象的数据源。</p>
+        <h3>browser.$head</h3>
+        <p>浏览器对象的头部数据源。一个浏览器对象只能拥有一个头部数据源。</p>
+        <h3>browser.use</h3>
+        <p>中间件注册模块。参数如下：</p>
+        <ul>
+            <li>path: 路由正则或者字符串匹配规则。可省略，省略为'/'。</li>
+            <li>fn: 匹配规则匹配后的回调执行函数。这个函数具有以下参数：
+                <ul>
+                    <li>req: Request constructor 输入对象。</li>
+                    <li>res: Response constructor 输出对象</li>
+                    <li>next: 执行下一步回调的方法。如果不运行这个方法，将停止在此处，程序不会往下执行。</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>browser.active</h3>
+        <p>注册中间件终止回调规则匹配，其实 browser.active = browser.use(req, res); 省略了next，不往下执行。</p>
+        <h3>browser.webview</h3>
+        <p>这个browser对象下注册模板。它只有一个参数，就是节点表达式或者节点对象。</p>
+        <h3>browser.component</h3>
+        <p>往这个浏览器对象下注册component组件，具体组件制作，请查看VUE文档。参数如下：</p>
+        <ul>
+            <li>name: 注册的组件名称</li>
+            <li>args: 注册的组件具体配置选项</li>
+        </ul>
+        <h3>browser.directive</h3>
+        <p>同browser.component一样，该方法注册directive指令组件，参数与component方法相同。故省略。</p>
+    </div>
+</template>

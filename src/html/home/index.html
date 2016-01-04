@@ -1,0 +1,78 @@
+<template name="home">
+    <div class="big-title">Welcome to simplize framework</div>
+    <div class="content-block"><a href="javascript:;" class="button soe-clearflash" v-href="'/about'">About Simplize Framework</a></div>
+    <div class="space"></div>
+    <div class="alipay-area">
+        <div class="alipay-wrapbox soe-clearfix" v-if="index.alipayList.length > 0" transition="bounce">
+            <div class="alipay-item soe-pull-left" v-for="item in index.alipayList">
+                <div class="alipay-item-box soe-clearflash" v-href="item.url">
+                    <div class="alipay-item-icon fa" :class="item.icon" :style="'color:' + item.color"></div>
+                    <div class="alipay-item-text">{{item.text}}</div>
+                </div>
+            </div>
+        </div>
+        <div v-else class="alipay-wrapbox-else">Loading Boxes... <span>{{index.reduceTime}}</span></div>
+    </div>
+    <div class="big-title">Simplize UI Components</div>
+    <div class="griadtable">
+        <div class="item">
+            <div class="channel soe-clearfix soe-clearflash">
+                <div class="channel-icon soe-pull-left">
+                    <i class="fa fa-wechat"></i>
+                </div>
+                <div class="channel-area soe-clearfix">
+                    <div class="channel-arrow soe-pull-right">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    WeChat component package
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="channel soe-clearfix soe-clearflash">
+                <div class="channel-icon soe-pull-left">
+                    <i class="fa fa-train"></i>
+                </div>
+                <div class="channel-area soe-clearfix">
+                    <div class="channel-arrow soe-pull-right">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    Train component tickets
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="channel soe-clearfix soe-clearflash">
+                <div class="channel-icon soe-pull-left">
+                    <i class="fa fa-google-plus"></i>
+                </div>
+                <div class="channel-area soe-clearfix">
+                    <div class="channel-arrow soe-pull-right">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    Google + in china
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="channel soe-clearfix soe-clearflash">
+                <div class="channel-icon soe-pull-left">
+                    <i class="fa fa-qq"></i>
+                </div>
+                <div class="channel-area soe-clearfix">
+                    <div class="channel-arrow soe-pull-right">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    QQ company constructor
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="space"></div>
+</template>

@@ -1,0 +1,71 @@
+<template name="coding">
+    <div class="channel-content">
+        <p>首先，我们必须了解VUE的api，熟读VUE的教程，因为我们是基于VUE创建的app应用。</p>
+        <p>其次，我们需要理解simplize的运作机制。</p>
+        <h3>How does simplize run?</h3>
+        <p>第一步，simplize会解析url规则，将querys解析到hash后面组成一个完整的hashurl作为我们的初始路由。</p>
+        <p>第二步，simplize将我们的模板和js指定的browser和webview联系起来插入到我们的容器。</p>
+        <p>第三步，根据我们的初始路由地址，进行中间件模式匹配到我们确定的回调函数中之行具体的方法。</p>
+        <p>第四步，在具体的方法中通过res.render指定我们要渲染的模板，显示界面。</p>
+        <p>第五步，渲染完毕后，通过对数据对操作进入VUE的数据驱动模式来改变数据，从而改变界面上数据的现实。</p>
+        <p>第六步，只要我们的hash改变都会触发hashchange事件来重复第三步，改变我们的页面显示。</p>
+        <h3>How to code it?</h3>
+        <p>第一步，我们需要引入simplize组件。</p>
+        <pre>var Simplize = require('simplize');</pre>
+        <p>第二步，我们对simplize进行配置，比如配置调试模式和设置viewport。</p>
+        <pre>// 设置调试模式，之后在浏览器的console中就能看到你的调试内容
+Simplize.debug = true;
+// 设置页面的viewport。如果你的设计稿是根据640比例来的，那么写入640，否则你写入你设计稿的比例即可。系统将自动缩放到设计稿比例。
+Simplize.setViewPort(640);
+</pre>
+        <p>第三步，在所有节点加载完毕后我们才能操作具体的实例，否则无法找到我们的节点而报错。</p>
+        <pre>Simplize.ready(function(){
+    // code here
+});</pre>
+        <p>第四步，初始化你的app。写在ready回调方法中。</p>
+        <pre>var soyie = new Simplize('#webapp');</pre>
+        <p>第五步，添加你的browser对象到soyie中。</p>
+        <pre>var demoBrowser = soyie.browser({
+    // 浏览器对象标识名
+    name: 'demo',
+    // 浏览器对象文本名
+    text: 'demo测试页面',
+    // 浏览器对象图标
+    icon: '&lt;i class="fa fa-home"&gt;&lt;/i&gt;',
+    // 浏览器对象点击后到跳转地址
+    url: '/'
+})</pre>
+        <p>第六步，确定你的浏览器对象中的webview模板对象, 如果有多个模板，重复写多次即可。</p>
+        <pre>// webview中参数可以是表达式也可以是具体的一个节点对象
+demoBrowser.webview("template[name=index]");</pre>
+        <p>第七步， 设置浏览器对象的具体路由</p>
+        <pre>// 使用路由中间件来处理数据
+demoBrowser.use(function(req, res, next){
+    // code here
+    next();
+});
+
+// 使用active状态来指定你的操作，即页面被激活都会触发这个方法
+demoBrowser.active(function(req, res){
+    // code here
+    res.render('index');
+});
+
+// 你也可以处理这个浏览器对象下的其他路由
+demoBrowser.active('/list/:id/:method', function(req, res){
+    // code here
+    res.render('list');
+});</pre>
+        <p>第八步，将你的browser对象依附到我们的soyie的app对象上去。这个app对象也是一个路由构件，所有具有路由选择功能。不过需要注意的是，这里的路由需要根据深度倒着定义写入。</p>
+        <pre>soyie.use('/list/mo', listBrowser);
+soyie.use('/dist', distBrower);
+soyie.use(demoBrowser);</pre>
+        <p>第九步，你可以对soyie对象进行事件处理，比如end事件。</p>
+        <pre>soyie.on('end', function(){
+    console.log('complete');
+});</pre>
+        <p>第十步，监听你的整个app</p>
+        <pre>soyie.listen();</pre>
+        <p>想必，看完这十步，你们应该对simplize的书写有一定了解了吧。你可以将其中的某些步骤拆分到不同的文件中require调用来达到代码规整化效果。期天api请参阅api文档说明吧，这里不多做解释了。<p>
+    </div>
+</template>

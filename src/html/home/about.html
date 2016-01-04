@@ -1,0 +1,23 @@
+<template name="about">
+    <div class="channel-content">
+        <div class="quote">Simplize is a simple appearance which create app easily.</div>
+        <h3>What is Simplize?</h3>
+        <p>Simplize 是一套基于VUE创建的快速开发app应用的框架。它分为环境层和数据层。环境层分浏览器层和窗口层。数据层就是VUE的数据驱动模式。</p>
+        <p>鉴于VUE是一套开源的数据驱动mvvm框架，这里将不做介绍了。</p>
+        <p>但是，我们必须详细介绍下环境层的一些知识点。</p>
+        <h3>What is Environment?</h3>
+        <p>环境层就是我们需要操作的ui层。分为浏览器对象browser和窗口对象webview。它们的关系是，整个app应用具有多个browser，而每个browser具有多个内置的webview。就像你进入一个app，发现底部有多个tab切换场景，那么，我们的browser就如同这个单个切换场景一样。而当你进入每个不同场景后，又发现具有多个页面的切换，那么，这些页面切换就如同我们的webview。</p>
+        <p>需要注意的是，browser之间的切换没有slide滑动效果，而同一browser下的webview切换具有滑动slide效果。这也是非常符合原生app的切换模式的。</p>
+        <h3>How to create a simplize app?</h3>
+        <p>首先你需要安装nodejs，然后安装nap-cli组件。通过以下命令来创建你的项目</p>
+        <pre>cd you_dir
+nap create</pre>
+        <p>选择第4个 Simplize project - Vue framework &amp; component</p>
+        <p>输入你的项目名称即可</p>
+        <p>全部完成后进入你的项目目录使用</p>
+        <pre>npm run dev</pre>
+        <p>启动你的服务。在浏览器地址栏里输入：http://127.0.0.1:8000/src/html/index.html访问你的项目，这样，你可以一边写代码一边调试了。</p>
+        <p>打包编译你的项目，只需要轻松使用以下命令后将build目录下的所有文件拷贝出来就是你的完整项目文件了。</p>
+        <pre>npm run build</pre>
+    </div>
+</template>

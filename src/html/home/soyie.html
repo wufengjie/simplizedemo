@@ -1,0 +1,30 @@
+<template name="soyie">
+    <div class="channel-content">
+        <p>soyie是一个simplize的实例化对象，可以认为是这个容器的对象。它同样具有路由功能，不过它路由的是browser对象。我们简称为browser路由对象。</p>
+        <h3>soyie.req</h3>
+        <p>输入对象</p>
+        <h3>soyie.res</h3>
+        <p>输出对象</p>
+        <h3>soyie.caseSensitive</h3>
+        <p>设置路由匹配的大小写敏感度，默认为false，不区分大小写。</p>
+        <h3>soyie.$current</h3>
+        <p>当前浏览器对象。</p>
+        <h3>soyie.hideToolbar</h3>
+        <p>设置隐藏或者显示底部工具条，默认为false，就是开启底部工具条。</p>
+        <h3>soyie.use</h3>
+        <p>中间件注册模块。参数如下：</p>
+        <ul>
+            <li>path: 路由正则或者字符串匹配规则。可省略，省略为'/'。</li>
+            <li>fn: 匹配规则匹配后的回调执行函数。这个函数具有以下参数：
+                <ul>
+                    <li>req: Request constructor 输入对象。</li>
+                    <li>res: Response constructor 输出对象</li>
+                    <li>next: 执行下一步回调的方法。如果不运行这个方法，将停止在此处，程序不会往下执行。</li>
+                </ul>
+            </li>
+        </ul>
+        <p>这个中间件注册机制和browser的一样。但是它是注册browser对象的中间件。</p>
+        <h3>soyie.listen</h3>
+        <p>监听整个app。</p>
+    </div>
+</template>

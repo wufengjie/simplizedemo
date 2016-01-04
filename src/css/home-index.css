@@ -1,0 +1,113 @@
+.alipay-area{
+    min-height: 243px;
+}
+.alipay-wrapbox{
+    background-color: #fff;
+    border-top:1px solid #eee;
+}
+.alipay-wrapbox-else{
+    text-align:center;
+    line-height:243px;
+    min-height:243px;
+}
+.alipay-wrapbox-else span{
+    color: rgb(0, 122, 255);
+}
+.alipay-wrapbox .alipay-item{
+    width: 25%;
+}
+.alipay-wrapbox .alipay-item .alipay-item-box{
+    border-right:1px solid #eee;
+    border-bottom:1px solid #eee;
+    text-align: center;
+    width: 100%;
+}
+.alipay-wrapbox .alipay-item .alipay-item-box .alipay-item-icon{
+    padding-top: 15px;
+    height: 45px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.alipay-wrapbox .alipay-item .alipay-item-box .alipay-item-text{
+    padding-bottom: 15px;
+    height: 35px;
+    line-height: 20px;
+    color:#333;
+    font-size: 12px;
+}
+
+.big-title{
+    font-size: 14px;
+    color: #777;
+    padding: 20px 15px 10px 15px;
+    font-weight: bold;
+}
+
+.content-block {
+    margin: 5px 0 20px 0;
+    padding: 0 15px;
+    color: #6d6d72;
+    box-sizing: border-box;
+}
+
+.content-block .button {
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    line-height: 34px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: none;
+    padding: 0 10px;
+    margin: 0;
+    height: 36px;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.griadtable{
+    background-color: #fff;
+    margin-top: 10px;
+}
+.griadtable .item{
+    padding-left: 15px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.griadtable .item i{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+}
+
+.griadtable .item .channel-icon{
+    width: 50px;
+    text-align: center;
+    color: #777;
+    font-size: 20px;
+}
+
+.griadtable .item .channel-area{
+    margin-left: 50px;
+    border-bottom: 1px solid #eee;
+}
+.griadtable .item .channel-area .channel-arrow{
+    padding-right: 15px;
+    color: #999;
+}
+.griadtable .item:last-child .channel-area{
+    border-bottom: 0px;
+}

@@ -1,0 +1,69 @@
+html,body,.webview{ background-color: #efeff4!important;}
+.browser header .soe-navbar .soe-navbar-icon i{ display: block; line-height: 44px; }
+.soe-navbar{ background-color:#f5f5f5; border-bottom:1px solid #ddd; }
+.toolbar{ border-top:1px solid #ddd!important; opacity:.8; }
+.toolbar-item{width: 100%; text-align: center; }
+.toolbar-icon, .toolbar-icon i{ height: 36px; line-height: 36px; font-size: 26px; color:#ccc }
+.toolbar-text{ color:#ccc; font-size:12px; }
+.toolbar-item.actived .toolbar-icon i, .toolbar-item.actived .toolbar-text{ color:rgb(0, 122, 255); }
+.webviewHideToolbar{border-bottom: 58px solid #efeff4!important;}
+.webviewShowHead{ border-top:44px solid #efeff4!important;}
+
+.home-navbar{ background: #fff; border-bottom: 1px solid #ddd;}
+.soe-navbar-icon,
+.soe-navbar-left-area .soe-navbar-text,
+.soe-navbar-right-area .soe-navbar-text{ color: rgb(0, 122, 255);}
+.space{ height: 5px;}
+.channel-content{
+    padding: 15px 15px 5px 15px;
+    line-height: 20px;
+}
+
+.quote, pre{ border: 1px dashed #ccc; padding: 5px; color:#999; background-color: #f5f5f5; word-wrap: break-word;}
+
+.bounce-enter {
+  animation: bounce-in .5s;
+}
+.bounce-leave {
+  animation: bounce-out .5s;
+}
+@-webkit-keyframes bounce-in {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+    }
+    100% {
+        opacity: 1
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes bounce-in {
+    0% {
+      opacity:0;
+      -webkit-transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+    }
+}
+@k-webkit-eyframes bounce-out {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+    }
+}
+@keyframes bounce-out {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+    }
+}
